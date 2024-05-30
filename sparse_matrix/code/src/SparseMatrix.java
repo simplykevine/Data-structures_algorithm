@@ -165,7 +165,11 @@ class SparseMatrix {
 
             try {
                 SparseMatrix matrix1 = new SparseMatrix(file1);
+                System.out.println("Matrix 1:");
+                System.out.println(matrix1);
                 SparseMatrix matrix2 = new SparseMatrix(file2);
+                System.out.println("Matrix 2:");
+                System.out.println(matrix2);
                 SparseMatrix result;
 
                 switch (choice) {
@@ -187,6 +191,7 @@ class SparseMatrix {
                 System.out.println(result);
 
             } catch (Exception e) {
+                e.printStackTrace(); // Print the stack trace to see the exact location of the error
                 System.out.println("Error: " + e.getMessage());
             }
         }
